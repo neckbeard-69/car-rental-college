@@ -1,0 +1,55 @@
+@import url("./shared.css");
+
+main {
+    margin-top: 96px;
+    display: grid;
+    place-items: center;
+}
+
+section {
+    max-width: 800px;
+    background: var(--clr-grey);
+    border-radius: 15px;
+    margin-top: 46px;
+}
+
+.tabs-btns {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    border-bottom: 2px solid var(--clr-blue-grey);
+    position: relative;
+
+    .btn {
+        font-size: 1.125rem;
+        font-weight: 600;
+        background-color: transparent;
+        padding: 1.125rem;
+        color: var(--clr-blue-grey);
+        transition: color 50ms linear;
+    }
+
+    .btn.active {
+        color: var(--clr-text);
+    }
+}
+
+.tab-content {
+    padding: 1.25rem;
+
+    p {
+        font-weight: 500;
+        line-height: 1.5;
+    }
+}
+
+.indicator {
+    position: absolute;
+    width: 110px;
+    height: 3px;
+    background-color: var(--clr-primary-100);
+    inset: 0;
+    top: 98%;
+    left: 1%;
+    transition: left 250ms linear, width 250ms linear;
+}

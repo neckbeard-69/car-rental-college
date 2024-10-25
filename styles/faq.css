@@ -1,0 +1,57 @@
+@import url("./shared.css");
+
+.faq-section {
+    margin-block: 96px;
+
+    .primary-heading {
+        margin-bottom: 3rem;
+    }
+
+    margin-inline: auto;
+    width: 60%;
+
+    span {
+        transition: rotate 250ms linear;
+        color: var(--clr-primary-100);
+    }
+
+    .faqs {
+        display: grid;
+        gap: 1.5rem;
+    }
+
+    .answer {
+        font-weight: 500;
+        line-height: 1.6;
+        border-bottom: 4px solid var(--clr-primary-100);
+        display: grid;
+        grid-template-rows: 0fr;
+        transition: grid-template-rows 250ms, padding-bottom 250ms;
+
+        p {
+            overflow: hidden;
+        }
+    }
+
+    .question.active {
+        .answer {
+            grid-template-rows: 1fr;
+            padding-bottom: 1rem;
+        }
+
+        span {
+            rotate: 45deg;
+        }
+    }
+
+    .question-text {
+        font-size: 1.5rem;
+        font-weight: 600;
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+        margin-bottom: 1rem;
+        cursor: pointer;
+    }
+
+}
